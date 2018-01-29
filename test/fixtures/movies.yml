@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  poster: MyString
+  trailer: MyText
+  rating: MyString
+  released_on: 2018-01-23
+  genre_id: 1
+
+two:
+  title: MyString
+  poster: MyString
+  trailer: MyText
+  rating: MyString
+  released_on: 2018-01-23
+  genre_id: 1
