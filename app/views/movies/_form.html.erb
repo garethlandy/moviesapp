@@ -38,7 +38,7 @@
 
   <div class="field">
     <%= form.label :genre_id %>
-    <%= form.collection_select :genre_id,Genre.order(name),:id,:name,:include_blank =>"Select from list" %>
+    <%= form.collection_select :genre_id,Genre.all,:id,:name,:include_blank =>"Select from list" %>
   </div>
 
   <div class="actions">

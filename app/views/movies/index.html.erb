@@ -19,7 +19,7 @@
     <% @movies.each do |movie| %>
       <tr>
         <td><%= movie.title %></td>
-        <td><%= movie.poster %></td>
+        <td><%= image_tag movie.poster, :size => "40x40" %></td>
         <td><%= movie.trailer %></td>
         <td><%= movie.rating %></td>
         <td><%= movie.released_on %></td>
@@ -32,6 +32,7 @@
   </tbody>
 </table>
 
-<br>
 
 <%= link_to 'New Movie', new_movie_path %>
+<br>
+<% will_paginate @movies %>
