@@ -23,7 +23,7 @@
         <td><%= movie.trailer %></td>
         <td><%= movie.rating %></td>
         <td><%= movie.released_on %></td>
-        <td><%= movie.genre_id %></td>
+        <td><%= movie.genre.name %></td>
         <td><%= link_to 'Show', movie %></td>
         <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
         <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -35,4 +35,4 @@
 
 <%= link_to 'New Movie', new_movie_path %>
 <br>
-<% will_paginate @movies %>
+<%= will_paginate @movies %>
