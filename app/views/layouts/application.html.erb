@@ -16,7 +16,12 @@
       
       <nav>
         <ul class = "nav navbar-nav navbar-right" >
-          <li><%= link_to "About", '#' %></li>       
+			<% if !signed_in? %>
+				<li><%= link_to"Sign In", login_path%></li>
+			<% else %>
+				<li>Signed in as: <%= @current_user.name%></li>	
+				<li><%= link_to"Sign Out", logout_path%></li>
+			<% end %>		
 			<%= link_to "Movie News", 'http://oscars.go.com/nominees' %>
 			<%= link_to "home", root_path %>
 			<%= mail_to "gareth.landy@hotmail.com","Contact Us" %>	
@@ -24,6 +29,12 @@
       </nav>
     </div>
   </header>
+  
+  <%flash.each do |key,value|%>
+		<div class= "flash<%= key %>">
+			<%= value %>
+		</div>
+	<% end %>	
   
 	<br>
     <%= yield %>
